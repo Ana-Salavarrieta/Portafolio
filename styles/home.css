@@ -154,7 +154,7 @@ section {
   border: none;
   cursor: pointer;
   box-shadow: 0 3px 8px rgba(78, 59, 42, 0.12);
-  margin-bottom: 1.5rem; /* 🔴 unificado */
+  margin-bottom: 1.5rem; 
 }
 
 .btn:hover {
@@ -298,7 +298,7 @@ section {
 .timeline-content .date {
   display: inline-block;
   padding: .3rem .8rem;
-  background-color: var(--darker-bg); /* 🔴 antes rgba */
+  background-color: var(--darker-bg); 
   color: var(--primary-color);
   border-radius: 5px;
   font-size: .9rem;
@@ -419,7 +419,7 @@ section {
   object-fit: cover;;
 }
 
- /* Contact section */
+ 
  /* Contact Section */
 #contacto {
   display: grid;
