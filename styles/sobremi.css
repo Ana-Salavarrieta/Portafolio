@@ -283,7 +283,7 @@ section {
 }
 
 /* Technical Skills Section */
-.container-linea-about {
+.container-lineas-about {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -303,7 +303,7 @@ section {
   gap: 0.5rem;
 }
 
-.container-linea-estado div {
+.container-linea-estado > div {
   width: 100%;
   background-color: var(--darker-bg);
   border-radius: 10px;
@@ -311,15 +311,14 @@ section {
   overflow: hidden;
 }
 
-.container-linea-estado div div {
-  background-color: var(--primary-color);
+.container-linea-estado > div > div {
   height: 100%;
+  background-color: var(--primary-color);
 }
 
 #linea-figma { width: 60%; }
 #linea-illustrator { width: 50%; }
 #linea-html { width: 65%; }
-#linea-Blender { width: 0.5%; }
 #linea-photoshop { width: 65%; }
 
 /* Contact Section */
