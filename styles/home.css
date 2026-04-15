@@ -420,7 +420,6 @@ section {
 }
 
  /* Contact section */
- /* Contact Section */
 #contacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -455,6 +454,16 @@ section {
 
 #contacto button {
   align-self: flex-start;
+}
+.contact-item .icono {
+  width: 18px;
+  height: 18px;
+  color: var(--primary-color);
+}
+
+.contact-item:hover .icono {
+  color: var(--primary-color);
+  transform: scale(1);
 }
 
 footer {
