@@ -142,9 +142,11 @@ section {
 
 .hero-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 6rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .hero-text {
