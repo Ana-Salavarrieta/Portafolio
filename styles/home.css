@@ -456,12 +456,19 @@ section {
 #contacto button {
   align-self: flex-start;
 }
+
 .contact-item {
   display: flex;
   align-items: center;
   gap: 0.8rem;
   margin-bottom: 1rem;
 }
+
+.contact-item svg {
+  position: relative;
+  top: 1px;
+}
+
 footer {
   background-color: var(--darker-bg);
   border-top: 1px solid var(--border-color);

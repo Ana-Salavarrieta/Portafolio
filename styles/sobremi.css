@@ -326,6 +326,9 @@ section {
 
 /* Philosophy */
 .philosophy-section {
+  background-color: var(--darker-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -412,6 +415,9 @@ section {
 
 /* Services */
 .services-section {
+  background-color: var(--darker-bg);
+  border-radius: 12px;
+  padding: 2.5rem;
   padding: 3rem;
   text-align: center;
   margin-bottom: 3rem;
