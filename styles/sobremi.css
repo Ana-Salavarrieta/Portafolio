@@ -15,6 +15,8 @@
   box-sizing: border-box;
 }
 
+/* bases tipografia y eso */
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,7 +47,8 @@ img {
   display: block;
 }
 
-/* Header */
+/* inicio */
+
 header {
   position: fixed;
   top: 0;
@@ -66,6 +69,8 @@ header {
   margin: 0 auto;
 }
 
+/* logo */
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -75,6 +80,8 @@ header {
 .logo span {
   color: var(--primary-color);
 }
+
+/* links */
 
 .nav-links {
   display: flex;
@@ -106,8 +113,10 @@ header {
   width: 100%;
 }
 
+/* section*/
+
 section {
-  padding: 6rem 5%;
+  padding: 3rem 5%;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -131,6 +140,8 @@ section {
   background-color: var(--primary-color);
 }
 
+/* botones */
+
 .btn {
   display: inline-block;
   background-color: var(--primary-color);
@@ -143,6 +154,7 @@ section {
   border: none;
   cursor: pointer;
   box-shadow: 0 3px 8px rgba(78, 59, 42, 0.12);
+  margin-bottom: 1.5rem; 
 }
 
 .btn:hover {
@@ -151,9 +163,10 @@ section {
   box-shadow: 0 6px 15px rgba(78, 59, 42, 0.25);
 }
 
-/* Hero section */
+/* hero */
+
 .hero {
-  min-height: 100vh;
+  min-height: 82vh;
   display: flex;
   align-items: center;
   padding-top: 5rem;
@@ -163,7 +176,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 2.5rem;
 }
 
 .hero-text {
@@ -173,14 +186,12 @@ section {
 .hero-text h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
 }
 
 .hero-text h2 {
   font-size: 1.5rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  font-weight: 600;
 }
 
 .hero-text p {
@@ -189,6 +200,8 @@ section {
   font-size: 1.1rem;
   max-width: 600px;
 }
+
+/* los links y asi con el icono */
 
 .social-links {
   display: flex;
@@ -200,19 +213,21 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: var(--card-bg);
-  color: var(--light-text);
+  color: var(--primary-color);
   transition: var(--transition);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .social-links a:hover {
   background-color: var(--primary-color);
   transform: translateY(-3px);
 }
+
+/* imagen de hero*/
 
 .hero-image {
   flex: 1;
@@ -221,22 +236,99 @@ section {
 }
 
 .hero-image img {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 40%;
-  border: 5px solid var(--primary-color);
-  box-shadow: 0 15px 35px rgba(78, 59, 42, 0.25);
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 10px 20px rgba(78, 59, 42, 0.25);
   transition: var(--transition);
 }
 
 .hero-image img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 25px 50px rgba(78, 59, 42, 0.35);
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(78, 59, 42, 0.35);
 }
 
-/* Philosophy section */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 45px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+}
+
+.timeline-content .date {
+  display: inline-block;
+  padding: .3rem .8rem;
+  background-color: var(--darker-bg); 
+  color: var(--primary-color);
+  border-radius: 5px;
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-content h3 {
+  margin-bottom: .5rem;
+  font-size: 1.3rem;
+}
+
+.timeline-content h4 {
+  color: var(--gray-text);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Container */
+.container {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Philosophy */
 .philosophy-section {
+  background-color: var(--darker-bg);
+  padding: 3rem;
+  border-radius: 12px;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -256,7 +348,7 @@ section {
 
 .inicio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -264,7 +356,7 @@ section {
 .inicio-block {
   text-align: center;
   padding: 2rem;
-  background-color: var(--card-bg);
+  background: var(--card-bg);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
@@ -282,38 +374,38 @@ section {
   color: var(--gray-text);
 }
 
-/* Technical Skills Section */
-.container-lineas-about {
+/* Skills */
+.container-linea-about {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .linea {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 
 .container-linea-estado {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 
-.container-linea-estado > div {
+.container-linea-estado div {
   width: 100%;
-  background-color: var(--darker-bg);
+  background: var(--darker-bg);
   border-radius: 10px;
   height: 1.5rem;
   overflow: hidden;
 }
 
-.container-linea-estado > div > div {
+.container-linea-estado div div {
+  background: var(--primary-color);
   height: 100%;
-  background-color: var(--primary-color);
 }
 
 #linea-figma { width: 60%; }
@@ -321,7 +413,87 @@ section {
 #linea-html { width: 65%; }
 #linea-photoshop { width: 65%; }
 
-/* Contact Section */
+/* Services */
+.services-section {
+  background-color: var(--darker-bg);
+  border-radius: 12px;
+  padding: 2.5rem;
+  padding: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-header {
+  margin-bottom: 2.5rem;
+}
+
+.services-header h2 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.services-header p {
+  color: var(--gray-text);
+  max-width: 500px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.service-card h3 {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;      
+}
+.icon {
+  margin-bottom: 12px;
+}
+.icon {
+  margin-bottom: 12px;
+}
+
+.icono {
+  width: 32px;
+  height: 32px;
+  fill: var(--primary-color);
+  transition: var(--transition);
+}
+
+.service-card:hover .icono {
+  transform: scale(1.15);
+  fill: var(--light-text);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--gray-text);
+  line-height: 1.5;
+}
+
+ /* Contact Section */
 #contacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -356,6 +528,18 @@ section {
 
 #contacto button {
   align-self: flex-start;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-item svg {
+  position: relative;
+  top: 1px;
 }
 
 footer {
