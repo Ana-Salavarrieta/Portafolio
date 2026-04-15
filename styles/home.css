@@ -317,7 +317,7 @@ section {
   font-weight: 500;
 }
 
-/* projects container */
+/* projects cards */
 
 .projects-container {
   display: grid;
@@ -341,17 +341,20 @@ section {
 
 .project-img {
   overflow: hidden;
+  height: 220px;
+  border-radius: 12px 12px 0 0;
 }
 
 .project-img img {
-  transition: var(--transition);
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
 }
 
 .project-card:hover .project-img img {
-  transform: scale(1.0);
+  transform: scale(1.05);
 }
-
 
 .project-info {
   padding: 1.5rem;
@@ -418,68 +421,83 @@ section {
 
  /* Contact section */
     #contacto {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-    
-    #contacto h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    #contacto form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    #contacto input,
-    #contacto textarea {
-      padding: 1rem;
-      border: 1px solid var(--border-color);
-      border-radius: 5px;
-      background-color: var(--card-bg);
-      font-family: inherit;
-    }
-    
-    #contacto textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-    
-    #contacto button {
-      align-self: flex-start;
-    }
-    
-
-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
   background-color: var(--darker-bg);
-  border-top: 1px solid var(--border-color);
-  padding: 2rem 5%;
+  padding: 3rem;
+  border-radius: 15px;
 }
 
-.footer-content {
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#contacto p {
+  color: var(--gray-text);
+}
+
+#contacto form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-@media (max-width: 480px) {
+#contacto input,
+#contacto textarea {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--light-text);
+  font-family: inherit;
+  transition: var(--transition);
+}
 
-  header {
-    position: static;
-  }
+#contacto input:focus,
+#contacto textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(200, 162, 122, 0.2);
+}
 
-  #navbar {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-  }
-  #contacto {
-        grid-template-columns: 1fr;
-      }
-    }
+#contacto textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#contacto button {
+  align-self: flex-start;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  transition: var(--transition);
+}
+
+#contacto button:hover {
+  background-color: var(--light-text);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.icono {
+  width: 22px;
+  height: 22px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.contact-item:hover .icono {
+  color: var(--light-text);
+  transform: scale(1.1);
+}
+
