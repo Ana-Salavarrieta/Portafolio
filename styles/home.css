@@ -154,7 +154,7 @@ section {
   border: none;
   cursor: pointer;
   box-shadow: 0 3px 8px rgba(78, 59, 42, 0.12);
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.5rem; /* 🔴 unificado */
 }
 
 .btn:hover {
@@ -298,7 +298,7 @@ section {
 .timeline-content .date {
   display: inline-block;
   padding: .3rem .8rem;
-  background-color: var(--darker-bg); 
+  background-color: var(--darker-bg); /* 🔴 antes rgba */
   color: var(--primary-color);
   border-radius: 5px;
   font-size: .9rem;
@@ -419,7 +419,7 @@ section {
   object-fit: cover;;
 }
 
- 
+ /* Contact section */
  /* Contact Section */
 #contacto {
   display: grid;
@@ -455,18 +455,6 @@ section {
 
 #contacto button {
   align-self: flex-start;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-.contact-item svg {
-  position: relative;
-  top: 1px;
 }
 
 footer {
