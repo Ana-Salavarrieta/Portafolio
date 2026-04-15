@@ -160,10 +160,13 @@ section {
 }
 
 .hero-content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 4rem;
+  justify-items: center;
+  min-height: 100vh;
+  gap: 2rem;
+  text-align: center;
 }
 
 .hero-text {
@@ -413,6 +416,7 @@ section {
 .next {
   right: 0;
 }
+
 #contacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
