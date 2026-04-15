@@ -31,16 +31,19 @@ function enviarFormulario() {
 
 // slider con translatex
 
-let sliderIndex = 0;
-const slides0 = document.querySelectorAll(".slide");
+setInterval(siguiente1, 3000);
+mostrarSlide1(index1);
 
-function moveSlide(step) {
-  sliderIndex += step;
+// Slider con translateX
+let index2 = 0;
+const slider2 = document.querySelector(".slider-dos");
 
-  if (sliderIndex < 0) sliderIndex = slides.length - 1;
-  if (sliderIndex >= slides.length) sliderIndex = 0;
+function moveSlide2(step) {
+  const totalSlides = slider2.children.length;
+  index2 += step;
 
-  slides.forEach((s, i) => s.classList.toggle("active", i === sliderIndex));
+  if (index2 < 0) index2 = totalSlides - 1;
+  if (index2 >= totalSlides) index2 = 0;
+
+  slider2.style.transform = `translateX(${-index2 * 100}%)`;
 }
-
-setInterval(() => moveSlide(1), 5000);
