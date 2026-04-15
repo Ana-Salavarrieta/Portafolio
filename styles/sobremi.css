@@ -457,6 +457,36 @@ section {
   margin-bottom: .5rem;
   font-size: 1.2rem;      
 }
+.icon {
+  margin-bottom: 12px;
+}
+.icon {
+  margin-bottom: 12px;
+}
+
+.icono {
+  width: 32px;
+  height: 32px;
+  fill: var(--primary-color);
+  transition: var(--transition);
+}
+
+.service-card:hover .icono {
+  transform: scale(1.15);
+  fill: var(--light-text);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--gray-text);
+  line-height: 1.5;
+}
+
  /* Contact Section */
 #contacto {
   display: grid;
