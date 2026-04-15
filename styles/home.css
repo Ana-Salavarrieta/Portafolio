@@ -236,7 +236,9 @@ section {
 }
 
 .hero-image img {
-  width: 100%;
+  width: 80%;
+  max-width: 300px;
+  min-width: 180px;
   height: auto;
   object-fit: cover;
   border-radius: 40%;
@@ -298,7 +300,7 @@ section {
 .timeline-content .date {
   display: inline-block;
   padding: .3rem .8rem;
-  background-color: var(--darker-bg); /* 🔴 antes rgba */
+  background-color: var(--darker-bg); 
   color: var(--primary-color);
   border-radius: 5px;
   font-size: .9rem;
@@ -419,7 +421,6 @@ section {
   object-fit: cover;;
 }
 
- /* Contact section */
  /* Contact Section */
 #contacto {
   display: grid;
@@ -457,6 +458,8 @@ section {
   align-self: flex-start;
 }
 
+/* footer */
+
 footer {
   background-color: var(--darker-bg);
   border-top: 1px solid var(--border-color);
@@ -470,6 +473,30 @@ footer {
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-item .icono {
+  width: 28px;
+  height: 28px;
+  fill: var(--primary-color);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.contact-item p {
+  font-size: 0.95rem;
+  color: var(--light-text);
+}
+
+.contact-item:hover .icono {
+  fill: var(--light-text);
+  transform: scale(1.1);
 }
 .hamburger {
   display: none;
