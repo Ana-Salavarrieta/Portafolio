@@ -30,23 +30,17 @@ function enviarFormulario() {
 }
 
 // slider con translatex
+
 let sliderIndex = 0;
+const slides0 = document.querySelectorAll(".slide");
 
 function moveSlide(step) {
-  const slider = document.getElementById("slider");
-  if (!slider) return;
-
-  const totalSlides = slider.children.length;
   sliderIndex += step;
 
-  if (sliderIndex < 0) sliderIndex = totalSlides - 1;
-  if (sliderIndex >= totalSlides) sliderIndex = 0;
+  if (sliderIndex < 0) sliderIndex = slides.length - 1;
+  if (sliderIndex >= slides.length) sliderIndex = 0;
 
-  slider.style.transform = `translateX(${-sliderIndex * 100}%)`;
+  slides.forEach((s, i) => s.classList.toggle("active", i === sliderIndex));
 }
 
-const sliderElement = document.getElementById("slider");
-if (sliderElement) {
-  sliderElement.style.transition = "transform 0.5s ease";
-  setInterval(() => moveSlide(1), 5000);
-}
+setInterval(() => moveSlide(1), 5000);

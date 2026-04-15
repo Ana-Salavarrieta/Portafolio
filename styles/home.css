@@ -391,35 +391,17 @@ section {
 
 
 /* slide de img */
-.slider-wrapper {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .slider {
-  position: relative;
-  overflow: hidden;
-  border-radius: .5rem;
-  box-shadow: 0 .25rem .5rem #21212126;
+  display: flex;
   width: 100%;
+  overflow: hidden;
+  transition: transform 0.5s ease;
 }
 
 .slide {
-  display: none;
+  min-width: 100%;
 }
 
-.slide.active {
-  display: block;
-}
-
-.slider img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;;
-}
-
- /* Contact section */
  /* Contact Section */
 #contacto {
   display: grid;
@@ -470,6 +452,35 @@ footer {
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
+}
+/* menu hamburgesa*/
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-text);
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+/* animacion */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Media Queries */
