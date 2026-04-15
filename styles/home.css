@@ -434,6 +434,10 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 50%;
+}
+.contact-form {
+  width: 50%;
 }
 
 .contact-info h2 {
